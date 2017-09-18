@@ -1,0 +1,23 @@
+.black{
+   background: url("../img/busca.png");
+}
+
+.white{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}
+
+td{
+    width: 50px;
+    height: 50px;
+} 
+.image{
+        background: white;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+}
+  
