@@ -20,13 +20,14 @@ function generateTable(map) {
         for (let j = 0; j < map[i].length; j++) {
             let celda = document.createElement("td");
             celda.setAttribute("class", "back");
-           // celda.addEventListener("click", function () {
+            celda.addEventListener("click", function () {
                 if (map[i][j] == "*") {
                     celda.setAttribute("class","bomb");
                     var imgContent = document.createElement("img");
                     imgContent.setAttribute("class", "image");
                     imgContent.src = "img/busca.png"
                     celda.appendChild(imgContent);
+                    alert("You Lose");
                 }
                 else if (map[i][j] == "_") {
                     celda.setAttribute("class", "white");
@@ -39,7 +40,7 @@ function generateTable(map) {
                     h3Valor.appendChild(content);
                     celda.appendChild(h3Valor);
                 }
-           // });
+            });
 
             filas.appendChild(celda);
             //arrayCelda[i][j] = celda;
