@@ -22,7 +22,7 @@ function generateTable(map) {
             celda.setAttribute("class", "back");
             celda.addEventListener("click", function () {
                 if (map[i][j] == "*") {
-                    celda.setAttribute("class","bomb");
+                    celda.setAttribute("class", "bomb");
                     var imgContent = document.createElement("img");
                     imgContent.setAttribute("class", "image");
                     imgContent.src = "img/busca.png"
@@ -49,14 +49,14 @@ function generateTable(map) {
     }
     tablero.appendChild(table);
 }
+
 /*
-function generateBomb(index) {
-
-    celda = document.getElementById(index);
-    var imgContent = document.createElement("img");
-    imgContent.setAttribute("class", "image");
-    imgContent.src = "img/busca.png"
-    celda.appendChild(imgContent);
-
-    alert("perdiste");
+var celda = document.getElementsByTagName("td");
+var bomb = document.getElementsByClassName("bomb");
+for(var i=0;i<celda.length; i++){
+    celda[i].addEventListener("click", function(){
+        if(celda[i]== "*"){
+            alert("perdiste");
+        }
+    });
 }*/
