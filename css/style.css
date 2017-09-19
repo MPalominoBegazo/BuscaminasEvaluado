@@ -58,3 +58,8 @@ td{
     background: #FFDD7E;
     color: #FFDD7E;
 }
+
+#reset{
+    display: none;
+    /*margin-bottom: 50px;*/
+}

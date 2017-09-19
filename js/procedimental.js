@@ -70,5 +70,10 @@ function showBombs(mapMinas){
            }
         }
     }
+    $("#reset").show();
+    $("#reset").click(function(){
+        let tablero = document.getElementById("tablero");
+        tablero.innerHTML = "";
+    });
 
 }
