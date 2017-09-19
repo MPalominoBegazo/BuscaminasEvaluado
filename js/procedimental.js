@@ -1,32 +1,46 @@
-generateTable();
+let mapBuscaminas = [
+    "**1__111",
+    "221__1*1",
+    "____1221",
+    "11__1*1_",
+    "*1__111_",
+    "11122211",
+    "113**2*1",
+    "1*3*3211"];
+generateTable(mapBuscaminas);
 
-function generateTable() {
-    let mapa = [
-        "**1__111",
-        "221__1*1",
-        "____1221",
-        "11__1*1_",
-        "*1__111_",
-        "11122211",
-        "113**2*1",
-        "1*3*3211"];
+function generateTable(map) {
+
     let table = document.createElement("table");
     table.border = "1";
     let tablero = document.getElementById("tablero");
- 
-    for (let i = 0; i < mapa.length; i++) {
+
+    for (let i = 0; i < map.length; i++) {
         let filas = document.createElement("tr");
-        for (let j = 0; j < mapa[i].length; j++) {
+        for (let j = 0; j < map[i].length; j++) {
             let celda = document.createElement("td");
-            if (mapa[i][j] == "*") {
-            var imgContent = document.createElement("img");
-                imgContent.setAttribute("class", "image");
-                imgContent.src = "img/busca.png"
-                celda.appendChild(imgContent);
-            }
-            else if (mapa[i][j] == "_") {
-                celda.setAttribute("class", "white");
-            }
+            celda.setAttribute("class", "back");
+           // celda.addEventListener("click", function () {
+                if (map[i][j] == "*") {
+                    celda.setAttribute("class","bomb");
+                    var imgContent = document.createElement("img");
+                    imgContent.setAttribute("class", "image");
+                    imgContent.src = "img/busca.png"
+                    celda.appendChild(imgContent);
+                }
+                else if (map[i][j] == "_") {
+                    celda.setAttribute("class", "white");
+                }
+                else {
+                    h3Valor = document.createElement("h3");
+                    h3Valor.setAttribute("class", "numeros");
+                    celda.setAttribute("class", "white");
+                    content = document.createTextNode(map[i][j]);
+                    h3Valor.appendChild(content);
+                    celda.appendChild(h3Valor);
+                }
+           // });
+
             filas.appendChild(celda);
             //arrayCelda[i][j] = celda;
         }
@@ -34,3 +48,14 @@ function generateTable() {
     }
     tablero.appendChild(table);
 }
+/*
+function generateBomb(index) {
+
+    celda = document.getElementById(index);
+    var imgContent = document.createElement("img");
+    imgContent.setAttribute("class", "image");
+    imgContent.src = "img/busca.png"
+    celda.appendChild(imgContent);
+
+    alert("perdiste");
+}*/
