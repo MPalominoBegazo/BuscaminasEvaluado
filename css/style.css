@@ -1,5 +1,32 @@
+body{
+    background: url("../img/background2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1{
+    margin: 30px auto auto auto;
+    font-family: 'Wendy One', sans-serif;
+}
+
 .black{
    background: url("../img/busca.png");
+}
+
+#tablero{
+    width: 416px;
+    height: 416px;								
+    margin-left: 35%;
+    margin-top: 120px;				
+}
+
+#numberBombs, #restBomb{
+    width: 50px;
 }
 
 .white{
@@ -11,6 +38,7 @@
 td{
     width: 50px;
     height: 50px;
+    border: 2px solid white;
 } 
 .image{
     background: white;
@@ -22,11 +50,11 @@ td{
 }
 
 .numeros{
-    color: #42A568;
+    color: #DD186A;
     font-size: 18px;
 }
 
 .back{
-    background: #6D2D2D;
-    color: #6D2D2D;
+    background: #FFDD7E;
+    color: #FFDD7E;
 }
