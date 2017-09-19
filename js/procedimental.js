@@ -28,33 +28,9 @@ function generateTable() {
                 celda.setAttribute("class", "white");
             }
             filas.appendChild(celda);
-          //  arrayCelda[i][j] = celda;
+            //arrayCelda[i][j] = celda;
         }
         table.appendChild(filas);
     }
     tablero.appendChild(table);
 }
-
-   /*for (var i = 0; i < mapa.length; i++) {
-        var filas = document.createElement("tr");
-
-        for (var j = 0; j < mapa[i].length; j++) {
-            var celda = document.createElement("td");
-            var img = document.createElement("img");
-            var imgContent = document.createElement("img");
-
-            img.setAttribute("class", "background");
-
-            imgContent.setAttribute("class", "image");
-            imgContent.src = "img/busca.png"
-
-            celda.appendChild(img);
-            celda.appendChild(imgContent);
-            cont++;
-            console.log(imgContent.src);
-
-            filas.appendChild(celda);
-        }
-        table.appendChild(filas);
-    }
-    tablero.appendChild(table);*/
