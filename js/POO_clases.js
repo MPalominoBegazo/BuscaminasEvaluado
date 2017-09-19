@@ -12,7 +12,7 @@ class Tablero {
                 let celda = document.createElement("td");
                 celda.setAttribute("class", "back");
                 celda.setAttribute("id", i + "" + j);
-                celda.addEventListener("click", this.showNumber(this), true);
+                celda.addEventListener("click", this.showNumber, true);
                 filas.appendChild(celda);
             }
             table.appendChild(filas);
